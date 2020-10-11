@@ -1,0 +1,62 @@
+@media only screen and (max-width: 600px) {
+    .viewport::ng-deep video {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .viewport::ng-deep canvas {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.viewport::ng-deep canvas {
+    z-index: 100;
+    position: absolute;
+    margin: auto;
+}
+
+.viewport {
+    display: flex;
+    justify-content: center;
+}
+
+.qr-viewport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .qr-code-text {
+        text-align: center;
+    }
+}
+
+.qr-download {
+    button {
+        background-color: #6f42c1;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #c2b2e1;
+    }
+    button:focus {
+        background-color: #6f42c1;
+    }
+    button::after {
+        background-color: #6f42c1;
+    }
+    button:active {
+        background-color: #6f42c1;
+    }
+}
+
+.qr-code::ng-deep canvas {
+    height: 300px!important;
+    width: 300px!important;
+}
